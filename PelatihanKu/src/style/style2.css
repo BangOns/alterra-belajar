@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ededef;
+  padding: 24px 64px 24px 64px;
+}
+
+.Logo-and-List {
+  width: 40%;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.Logo-and-List > img {
+  width: auto;
+  height: 33px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.List ul li {
+  font-size: 18px;
+}
+.Price-and-SignIn {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.Button-Style {
+  padding: 8px 24px 8px 24px;
+  background-color: #f44a5b;
+  color: #ededef;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+main {
+  position: relative;
+}
+.circle {
+  position: absolute;
+  left: -100px;
+  top: 201px;
+  z-index: -1;
+}
+.article {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 0;
+}
+.sec-1 {
+  width: 90%;
+  height: 335px;
+  display: flex;
+  gap: 32px;
+}
+.Box-Content {
+  width: 600px;
+  height: 100%;
+  background-color: #ededef;
+  border-radius: 5px;
+}
+.Text-Content {
+  width: 570px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.Text-Content > h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+.Text-Content > p {
+  font-size: 16px;
+}
+.sec-2 {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.player {
+  width: 373.33px;
+  height: 144px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 32px 10px 32px;
+  background-color: white;
+}
+.figure-player {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 0 0 18px 0;
+}
+.img-player {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #ededef;
+}
+.figcaption-player h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.figcaption-player p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
