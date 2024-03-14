@@ -4,8 +4,8 @@ import Button from "../../Component/Button/Button";
 
 const ListCTA = [
   {
-    link: "/game",
-    text: "Play Game",
+    link: "/burger-order",
+    text: "order now",
     variants: "secondary",
   },
   {
