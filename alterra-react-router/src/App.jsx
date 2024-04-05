@@ -6,6 +6,10 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import BurgerOrder from "./pages/BurgerOrder/BurgerOrder";
 import OrderedBurger from "./pages/OrderedBurger/OrderedBurger";
+import PagePost from "./pages/Posts/Post";
+import Weather from "./pages/Weather/Weather";
+import Recipe from "./pages/Recipe/Recipe";
+import RecipeId from "./pages/Recipe/Recipe_id";
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function Rooting() {
       <Route path="/order?done=" element={<OrderedBurger />} />
       <Route path="/help" element={<Help />} />
       <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/post" element={<PagePost />} />
+      <Route path="/weather" element={<Weather />} />
+      <Route path="/recipe" element={<Recipe />} />
+      <Route path="/recipe/:id" element={<RecipeId />} />
     </Routes>
   );
 }

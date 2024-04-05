@@ -1,17 +1,20 @@
 import React from "react";
-
-export default function DisplayBurger({ burgerManage = [], Click }) {
+import { useSelector, useDispatch } from "react-redux";
+import { removeBurgers } from "../../../libs/redux/Slice/BurgerIngredients.slice";
+export default function DisplayBurger() {
+  const { order } = useSelector((state) => state?.burgerIng?.burger);
+  const dispatch = useDispatch();
   return (
     <div className="max-w-80 h-auto mx-auto mt-10 flex flex-col gap-3 justify-center items-center">
       <div className="w-[100%] h-7 bg-amber-200 rounded-md"></div>
-      {burgerManage?.map((items, index) => {
+      {order?.map((burger, index) => {
         return (
           <div
             key={index}
-            className={`w-[50%] text-center rounded-md cursor-pointer ${items?.color}`}
-            onClick={() => Click(items, "remove")}
+            className={`w-[50%] text-center rounded-md cursor-pointer ${burger?.items?.color}`}
+            onClick={() => dispatch(removeBurgers(burger))}
           >
-            {items?.id}
+            {burger?.items?.id}
           </div>
         );
       })}

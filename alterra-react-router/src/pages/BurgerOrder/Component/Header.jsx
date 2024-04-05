@@ -1,13 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-export default function Header({ price, Click }) {
+import { useSelector, useDispatch } from "react-redux";
+import { resetBurgers } from "../../../libs/redux/Slice/BurgerIngredients.slice";
+export default function Header() {
   const navigate = useNavigate();
+  const { TotalPrice } = useSelector((state) => state?.burgerIng?.burger);
+  const dispatch = useDispatch();
   return (
     <div className="w-100 h-14 flex justify-between items-center">
-      <p className="text-2xl">Total Order : Rp. {price.toLocaleString("id")}</p>
+      <p className="text-2xl">
+        Total Order : Rp. {TotalPrice.toLocaleString("id")}
+      </p>
       <div className="flex gap-2">
-        {!price ? (
+        {!TotalPrice ? (
           <button className=" text-sm  rounded-md px-3 py-2 font-semibold  bg-slate-300 hover:bg-slate-400">
             Order Burger
           </button>
@@ -22,7 +27,7 @@ export default function Header({ price, Click }) {
             </button>
             <button
               className=" text-sm  rounded-md px-3 py-2 font-semibold  bg-red-400 hover:bg-red-300"
-              onClick={Click}
+              onClick={() => dispatch(resetBurgers())}
             >
               Reset
             </button>
